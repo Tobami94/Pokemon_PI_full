@@ -1,0 +1,75 @@
+/*divider*/
+.divider {
+	background: #21212169;
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	display: block;
+	height: 36px;
+	margin: 0 auto;
+}
+
+.homeContainer {
+	background-color: aliceblue;
+	background-size: 100% 1px;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 1054px;
+	width: 100%;
+}
+
+.selectOrder {
+  /* Estilos generales del select */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  background-color: #3a3838; 
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.selectOrder option {
+  /* Estilos de las opciones */
+  background-color: #313131;
+  color: #fff;
+}
+
+.selectOrder option:hover {
+  /* Estilos de las opciones al pasar el cursor sobre ellas */
+  background-color:  #313131;
+}
+
+.selectOrder option:selected {
+  /* Estilos de la opción seleccionada */
+  background-color: #181717;
+  color: #fff;
+}
+
+
+/*Buttons filterclean*/
+.buttonRestore {
+	padding: 10px;
+	margin-top: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	color: white;
+	background-color: #531a64;
+	background-image: none; 
+	border: none;
+	border-radius: 6px;
+	font-family: Arial, Helvetica, sans-serif;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	width: auto; 
+	box-sizing: border-box; 
+}
+
+.buttonRestore:hover {
+	background-color: #855096;
+	color: #fff;
+}

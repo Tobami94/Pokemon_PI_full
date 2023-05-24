@@ -1,0 +1,53 @@
+ul, li {
+    list-style: none;
+    display: inline;
+    padding-left: 0px;
+  }
+
+.number {
+    margin-left: 10px;
+    align-items: center;
+    display: inline;
+    padding: 8px;
+    }
+
+.btn {
+    color:rgb(255, 255, 255);
+    background-color: #290035;
+    border-radius: 2px;
+    border: none;
+    transition-duration: 0.4s;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.btn:focus
+{outline:none }
+
+.btn:hover {
+    cursor:pointer;
+    background-color: #62127a;
+    color: rgb(255, 255, 255)
+}
+
+.btnPrevNext {
+    color:rgb(255, 255, 255);
+    background-color: #290035;
+    font-size: 10PX;
+    border-radius: 2px;
+    border: none;
+    transition-duration: 0.4s;
+    width: auto;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.btnPrevNext:focus
+{outline:none }
+
+.btnPrevNext:hover {
+    cursor:pointer;
+    background-color: #62127a;
+    color: rgb(255, 255, 255)
+}

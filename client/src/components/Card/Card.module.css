@@ -1,0 +1,68 @@
+.stylesCard {
+    background: rgb(255, 255, 255);
+    margin: 35px;
+    width: 17rem;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 400ms ease;
+    box-sizing: content-box;
+    min-height: 150px;
+    border-width: 1.5px;
+  }
+  
+  .stylesCard:hover {
+    box-shadow: 20px 20px 20px rgb(0, 0, 0, 0, 4);
+    transform: translateY(-3%);
+  }
+
+  .figure {
+    background: #e9e8e8;
+    float: left;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: auto;
+    margin-bottom: 10px;
+  }
+
+ 
+  .name {
+    font-family: "Flexo-Demi",arial,sans-serif;
+    color: #313131;
+    text-transform: none;
+    font-size: 145%;
+    margin-bottom: 5px;
+  }
+
+  .abilities {
+    font-family: "Flexo-Medium",arial,sans-serif;
+    border-radius: 3px;
+    border: none;
+    line-height: 18px;
+    max-width: 110px;
+    margin: 0 1.4650% 0 0;
+    margin-bottom: 4px;
+    width: 39.5375%;
+    text-transform: none;
+    font-size: 11px;
+    text-align: center;
+  }
+  
+  .typeStyle {
+    list-style-type: none;
+    color: #f3f3f3;
+    text-decoration-line: none;
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: "Merienda", cursive;
+    text-decoration: none;
+  }
+  
+  ul li {
+    text-decoration-line: none;
+    list-style-type: none;
+    text-align: center;
+    align-content: center;
+  }

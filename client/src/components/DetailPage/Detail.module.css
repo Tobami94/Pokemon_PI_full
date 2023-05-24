@@ -1,0 +1,189 @@
+/* buttons */
+.batras {
+	margin-top: 10px;
+	background-color: rgb(26, 0, 51);
+	border-radius: 5px;
+	border: none;
+	color: rgb(243, 231, 255);
+	margin-right: 20px;
+	cursor: pointer;
+	padding: 8px;
+	transition-duration: 0.4s;
+}
+
+.batras:hover {
+	cursor: pointer;
+	background-color: #62127a;
+	color: #fff;
+}
+
+.button {
+	text-align: center;
+	margin-top: 5px;
+}
+
+.letter {
+	color: #fff;
+}
+
+* {
+	text-decoration: none;
+	color: #000;
+}
+
+.id {
+	color: #000;
+	margin-left: 0.125em;
+	white-space: nowrap;
+	font-family: "Roboto Condensed", arial, sans-serif;
+}
+
+/*Detail*/
+.contentPoke {
+	background-color: aliceblue;
+}
+
+.contentPoke::before {
+	content: '';
+	background-color: #62127a;
+	position: absolute;
+	inset: 0;
+	clip-path: polygon(100% 8%, 65% 8%, 100% 50%, 100% 100%);
+}
+
+.contentPoke > * {
+	position: relative;
+}
+
+.contentPoke {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px; /* Modificado */
+}
+
+.stats {
+	width: 100%; /* Modificado */
+	margin: 0;
+	margin-left: 0; /* Modificado */
+}
+
+.stats h3 {
+	margin-left: 0; /* Modificado */
+}
+
+.box1Poke {
+	padding: 0 20px; /* Modificado */
+}
+
+.box2Poke img {
+	width: 100%; /* Modificado */
+	height: auto;
+}
+
+/*pokemon*/
+.pokeName {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap; /* Modificado */
+	justify-content: space-between;
+	align-items: center;
+}
+
+.namePoke {
+	font-size: 36px;
+	font-family: "Roboto Condensed", arial, sans-serif;
+	font-weight: 600;
+	margin-left: 30px;
+}
+
+.valuesStat {
+	font-size: 18px;
+	border-radius: 8px;
+	background-color: #b45ccf;
+	padding: 5px 10px;
+	font-family: "Roboto Condensed", arial, sans-serif;
+	font-weight: 600;
+}
+
+.valuesRectangle {
+	border-radius: 8px;
+	background-color: #b45ccf;
+	padding: 5px 10px;
+	font-family: "Roboto Condensed", arial, sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.valuesRectangleTypesB {
+	border-radius: 8px;
+	border: 2px solid #62127a;
+	padding: 5px 10px;
+	font-family: "Roboto Condensed", arial, sans-serif;
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.valuesRectangleTypes {
+	border-radius: 8px;
+	border: 0;
+	padding: 5px 0;
+	font-family: "Roboto Condensed", arial, sans-serif;
+	font-weight: 600;
+}
+
+.container-value {
+	width: 100%; /* Modificado */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.containerCircle {
+	display: flex;
+	justify-content: space-between;
+}
+
+.physical {
+	margin: 11px 0;
+	width: 100%; /* Modificado */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.physical h3 {
+	padding-bottom: 11px;
+}
+
+.physical span {
+	margin-right: 5px;
+}
+
+.firstStats {
+	width: 100%; /* Modificado */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap; /* Modificado */
+}
+
+.power {
+	margin-top: 40px;
+}
+
+.power h4 {
+	margin-top: 30px;
+}
+
+.interBold {
+	font-family: "Roboto", arial, sans-serif;
+	font-weight: 600;
+	padding: 5px 10px;
+}
+
+/*Css no relevante*/
+.inter-medium {
+	font-family: "Roboto", arial, sans-serif;
+	font-weight: 600;
+}

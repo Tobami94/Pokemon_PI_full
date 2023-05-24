@@ -1,0 +1,92 @@
+.contenedorL {
+    background-color: aliceblue;
+    background-size: 100% 1px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1054px;
+    width: 100%;
+}
+
+
+/* HOME */
+
+h2 {
+    font-size: 34px;
+    margin-left: 50px
+}
+
+.pWelcome{
+    width: 500px;
+    margin: 26px 0;
+    font-size: 20px;
+}
+
+.btnHome{
+    width: 230px;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background-color: #62127a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnHome span{
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.btnHome:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* UNIVERSAL BACKGROUND FOR HOME AND RESULT OF POKEMON */
+
+.contentHome {
+    background-color:  aliceblue;
+     height: 100vh;
+    position: relative; 
+}
+.contentHome::before {
+    content: '';
+    background-color:  #62127a;
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(100% 0, 10% 0, 100% 100%, 100% 100%);
+}
+
+.contentHome > * {
+    position: relative;
+}
+
+.contentHome {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 270px;
+}
+
+.box1Home, .box2Home {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: center;
+}
+
+.box1Home {
+    padding: 0 40px;
+}
+
+.box2Home img {
+    width: 430px;
+    height: auto;
+}
+
+.interBold{
+    font-family: "Roboto Condensed",arial,sans-serif;
+    font-weight: 700;
+}

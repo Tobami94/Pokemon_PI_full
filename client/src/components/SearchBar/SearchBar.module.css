@@ -1,0 +1,152 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Pokedex Search Input Items */
+  
+  .pokedexSearchInputItems {
+    position: relative;
+    height: 4.8vw;
+    padding-top: 1.3vw;
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 1vw;
+  }
+  
+  .search {
+    float: left;
+    margin-right: -100%;
+    width: 72.5425%;
+    height: 4.8vw;
+    border: 0.3vw solid #616161;
+    clear: both;
+    position: relative;
+    top: -0.4vw;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 1.7vw;
+    padding: 1vw;
+  }
+  
+  .filterTextSearch {
+    float: left;
+    margin-right: -100%;
+    width: 85.49%;
+    margin-left: 7.2525%;
+    *zoom: 1;
+    margin-top: 2vw;
+    position: relative;
+  }
+  
+  .labelSearch label {
+    font-family: "Roboto Condensed", arial, sans-serif;
+    font-size: 3.4vw;
+    float: left;
+    color: #fff;
+  }
+  
+  .subtitle {
+    color: #fff;
+    font-family: arial, sans-serif;
+    font-size: 100%;
+    font-weight: 500;
+    line-height: 125%;
+    margin: 0.5vw 0;
+    text-align: left;
+  }
+  
+  .boton {
+    float: left;
+    width: 12.95%;
+    margin-right: -100%;
+    margin-left: 105.1025%;
+    background-image: url(../../assets/icons/input-search-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #290035;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    clear: none;
+    cursor: pointer;
+    text-indent: -9999px;
+    height: 4.8vw;
+    position: relative;
+    top: -0.5vw;
+    transition-duration: 0.4s;
+  }
+  
+  .boton:hover {
+    cursor: pointer;
+    background-color: #62127a;
+    color: #fff;
+  }
+  
+  /* Pokedex Filter */
+  
+  .pokedexFilter {
+    clear: both;
+    background: #616161;
+    border-color: #212121;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    width: 100%;
+    padding-bottom: 1em;
+  }
+  
+  .pokedexFilHeader {
+    *zoom: 1;
+    background: #313131;
+    float: left;
+    width: 100%;
+  }
+  
+  .column1 {
+    float: left;
+    margin-right: -100%;
+    width: 41.96%;
+    margin-left: 14.7825%;
+    margin-bottom: 1vw;
+  }
+  
+  .column2 {
+    float: left;
+    margin-right: -100%;
+    width: 41.96%;
+    margin-left: 55.7825%;
+    margin-top: 4vw;
+  }
+  
+  .contenidoTextual {
+    float: left;
+    margin: 2vw 0 0 0;
+    position: relative;
+  }
+  
+  .bannerSearch {
+    -webkit-transition: none;
+    -ms-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    background-color: #773a8a;
+    border-radius: 5px;
+    float: left;
+    padding-bottom: 0.2em;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .bannerSearch h2 {
+    font-size: 2.2vw;
+    text-align: center;
+    line-height: 132%;
+    margin-left: 1%;
+    padding: 0.4em;
+    text-transform: none;
+    font-family: "Roboto Condensed", arial, sans-serif;
+    letter-spacing: 0.1em;
+    color: #fff;
+  }

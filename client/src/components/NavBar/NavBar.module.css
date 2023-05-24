@@ -1,0 +1,136 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Animación */
+
+.anim:hover {
+  margin-top: 7.5vw;
+  animation: shake 900ms ease-in-out forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Tooltip */
+
+.tooltip {
+  position: relative;
+  float: left;
+  background: #531a64;
+  padding: 0.5vw 1.2vw;
+  margin: 0.5vw;
+  font-size: 1.3vw;
+  border-radius: 100%;
+  color: #FFF;
+  overflow: visible;
+}
+
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.tooltipContent {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltipText {
+  cursor: default;
+  pointer-events: none;
+  color: #fff;
+}
+
+.tooltipContent {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  padding: 0.8vw;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip:after {
+  content: attr(data-tooltip);
+  background: #531a64;
+  width: 16vw;
+  height: 4vw;
+  font-size: 1.1vw;
+  font-weight: 300;
+  margin-right: 0%;
+  top: -7.5vw;
+  left: -1vw;
+  padding: 1vw;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Nav */
+
+.logo {
+  width: 8.6vw;
+  float: left;
+  margin-left: 11vw;
+  margin-top: 1.2vw;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translate(0px, -1.8vw);
+}
+
+.header {
+  overflow: hidden;
+  height: 7vw;
+  background-color: #290035;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.buttonCreate {
+  float: right;
+  padding: 1vw;
+  margin-top: 1.5vw;
+  margin: 1vw;
+  font-size: 2vw;
+  color: white;
+  background-color: #531a64;
+  border: none;
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttonCreate:hover {
+  cursor: pointer;
+  background-color: #855096;
+  color: #fff;
+}

@@ -1,0 +1,154 @@
+.box {
+	padding: 50px;
+	background: #212121;
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.letterFot {
+	color: #fff;
+	font-size: 1.1em;
+}
+
+.letterFot:hover {
+	color: #62127a;
+	transition: 200ms ease-in;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin-left: 60px;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(185px, 1fr));
+	grid-gap: 30px;
+}
+
+@media (max-width: 1000px) {
+	.row {
+		grid-template-columns: repeat(2, minmax(200px, 1fr));
+	}
+}
+
+.footerLink {
+	color: #fff;
+	margin-bottom: 20px;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.footerLink:hover {
+	color: #62127a;
+	transition: 200ms ease-in;
+}
+
+.heading {
+	font-size: 24px;
+	color: #fff;
+	text-shadow: 2px 2px #000000;
+	margin-bottom: 40px;
+	font-weight: bold;
+}
+
+/*divider*/
+
+.divider {
+	background: #212121bb;
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	display: block;
+	height: 36px;
+	margin: 0 auto;
+}
+
+.notch {
+	float: left;
+	margin-right: -100%;
+	width: 81.64%;
+	margin-left: 9.1999%;
+	background-color: aliceblue;
+	height: 6px;
+	position: relative;
+}
+
+/* */
+
+.contenidoTextual {
+	float: left;
+	margin: 2em 0 0 0;
+	position: relative;
+}
+
+.bannerFoot {
+	-webkit-transition: none;
+	-ms-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	background-color: #773a8a;
+	border-radius: 5px;
+	float: left;
+	padding-bottom: 0.5em;
+	width: 100%;
+}
+
+.bannerFoot h2 {
+	font-size: 13px;
+	text-align: center;
+	line-height: 132%;
+	margin-left: 1%;
+	padding: 0.4em;
+	text-transform: none;
+	font-family: "Roboto Condensed", arial, sans-serif;
+	letter-spacing: 0.1em;
+	color: #fff;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+	.box {
+		padding: 30px; /* Modificado */
+	}
+
+	.column {
+		margin-left: 20px; /* Modificado */
+	}
+
+	.heading {
+		font-size: 20px; /* Modificado */
+	}
+
+	.row {
+		grid-template-columns: repeat(1, minmax(0, 1fr)); /* Modificado */
+		grid-gap: 20px; /* Modificado */
+	}
+}
+
+@media (max-width: 480px) {
+	.column {
+		margin-left: 10px; /* Modificado */
+	}
+
+	.footerLink {
+		font-size: 16px; /* Modificado */
+	}
+
+	.bannerFoot h2 {
+		font-size: 12px; /* Modificado */
+	}
+}
