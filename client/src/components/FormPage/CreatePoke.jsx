@@ -116,7 +116,6 @@ export default function PokemonCreate() {
               name="name"
               type="text"
               value={pokemon.name}
-              required
               className={StyleCreate.input}
             />{" "}
             {errors.name && <p className={StyleCreate.error}> {errors.name}</p>}

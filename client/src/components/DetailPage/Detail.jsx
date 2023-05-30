@@ -1,17 +1,21 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getDetail } from "../../redux/actions";
+import { getDetail, cleanDetail } from "../../redux/actions";
 import { Link } from "react-router-dom";
 import StyleDetail from "./Detail.module.css";
 
-export default function Detail(props) {
+export default function Detail() {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getDetail(props.match.params.id));
-  }, [props.match.params.id]);
+  const details = useSelector((state) => state.detail);
+  const { id } = useParams();
 
-  let details = useSelector((state) => state.detail);
+  useEffect(() => {
+    dispatch(getDetail(id));
+
+    return () => dispatch(cleanDetail()); //despacho el estado detail como ob obj vacio para que al desmontar el cmp se limpie.
+  }, []);
 
   const getColorByType = (type) => {
     switch (type) {
@@ -184,10 +188,10 @@ export default function Detail(props) {
           ) : (
             <img
               src={
-                "https://cdn.dribbble.com/users/621155/screenshots/2835314/simple_pokeball.gif"
+                "https://i.gifer.com/origin/28/2860d2d8c3a1e402e0fc8913cd92cd7a_w200.gif"
               }
-              width="250px"
-              height="300px"
+              width="50px"
+              height="80px"
               alt="Not found"
             />
           )}

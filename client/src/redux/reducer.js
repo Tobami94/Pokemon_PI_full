@@ -8,6 +8,7 @@ import {
    SORT,
    ORDER_ATTACK,
    POST_POKEMON,
+   CLEANDETAIL,
 
 } from "./actions";
 
@@ -54,15 +55,22 @@ function rootReducer ( state = initialState, action) {
                 };
 
                 case FILTER_TYPE:
-                    const allPokemons = state.allPokemons;
-                    const typeFiltered =
-                      action.payload === "type"
-                        ? allPokemons
-                        : allPokemons.filter((e) => e.types.includes(action.payload));
-                    return {
-                      ...state,
-                      pokemons: typeFiltered,
-                    };
+  const typeFiltered =
+    action.payload === "type"
+      ? state.allPokemons
+      : state.allPokemons.filter((e) => {
+          // Verifico si el Pokémon cumple con alguna de las dos condiciones
+          return (
+            e.types.some((type) => type.name === action.payload) ||
+            e.types.some((type) => type === action.payload) 
+          );
+        });
+  
+  return {
+    ...state,
+    pokemons: action.payload === "type" ? state.allPokemons : typeFiltered,
+  };
+                    
                   case FILTER_CREATED:
                     const createdFilter =
                       action.payload === "Creados"
@@ -108,7 +116,11 @@ function rootReducer ( state = initialState, action) {
                             action.payload === "Filtro" ? state.allPokemons : orderedCharacters
                         };
 
-
+               case CLEANDETAIL:
+            return {
+                ...state,
+                detail: {}
+            };
 
         default:
             return state;

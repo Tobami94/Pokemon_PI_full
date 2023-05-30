@@ -8,6 +8,7 @@ export const FILTER_CREATED = "FILTER_CREATED"
 export const SORT = "SORT";
 export const ORDER_ATTACK = "ORDER_ATTACK";
 export const POST_POKEMON = "POST_POKEMON";
+export const CLEANDETAIL = "CREALDETAIL";
 
 
 const LOCAL_URL = "http://localhost:3001";
@@ -62,6 +63,12 @@ export function getPokemons () {
       };
     };
   };
+
+
+  export const cleanDetail = () => {
+    return { type: CLEANDETAIL }
+    }   
+
 
   //search_poke_name
 

@@ -10,6 +10,7 @@ import {
   filterPokemonsByType,
   filterCreated,
   orderAttack,
+  getAllTypes,
 } from "../../redux/actions";
 
 import NavBar from "../NavBar/NavBar";
@@ -20,6 +21,8 @@ import Paginado from "./Paginado/Paginado";
 export default function Home() {
   const dispatch = useDispatch();
   const allPokemons = useSelector((state) => state.pokemons); //
+  const types = useSelector((state) => state.types);
+  console.log(types);
   const [currentPage, setCurrentPage] = useState(1);
   const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
   const indexOfLastPokemon = currentPage * pokemonsPerPage;
@@ -53,6 +56,10 @@ export default function Home() {
     e.preventDefault();
     dispatch(getPokemons());
     setCurrentPage(1);
+    document.getElementById("typosfilter").value = "type";
+    document.getElementById("attackfilter").value = "Fuerza";
+    document.getElementById("orderfor").value = "Filtro";
+    document.getElementById("all").value = "Todos";
   }
 
   useEffect(() => {
@@ -62,6 +69,10 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getPokemons());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getAllTypes());
   }, [dispatch]);
 
   function handleFilterType(e) {
@@ -90,6 +101,7 @@ export default function Home() {
         <div class="custom-select">
           <label>Order for </label>
           <select
+            id="orderfor"
             name="select"
             onChange={onSelectsChange}
             className={StyleHome.selectOrder}>
@@ -102,6 +114,7 @@ export default function Home() {
             <option value="DESCENDENTE">Descendente</option>
           </select>
           <select
+            id="attackfilter"
             name="selects"
             onChange={handleFilterAttack}
             className={StyleHome.selectOrder}>
@@ -111,20 +124,22 @@ export default function Home() {
             <option value="Mayor fuerza">++ attack</option>
             <option value="Menor fuerza">-- attack</option>
           </select>
-          <select onChange={handleFilterType} className={StyleHome.selectOrder}>
+          <select
+            id="typosfilter"
+            onChange={handleFilterType}
+            className={StyleHome.selectOrder}>
             <option value="type"> Type </option>
-            <option value="normal"> Normal </option>
-            <option value="flying"> Flying </option>
-            <option value="poison"> Poison </option>
-            <option value="ground"> Ground </option>
-            <option value="bug"> Bug </option>
-            <option value="fire"> Fire </option>
-            <option value="water"> Water </option>
-            <option value="grass"> Grass </option>
-            <option value="electric"> Electric </option>
-            <option value="fairy"> Fairy </option>
+            {types?.map((t) => {
+              console.log(t);
+              return (
+                <option key={t.id} value={t.name}>
+                  {t.name}
+                </option>
+              );
+            })}
           </select>
           <select
+            id="all"
             onChange={handleFilterCreated}
             className={StyleHome.selectOrder}>
             <option value="Todos"> All pokémon </option>
